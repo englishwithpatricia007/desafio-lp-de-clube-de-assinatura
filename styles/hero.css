@@ -1,0 +1,120 @@
+section#hero-container {
+  width: 100%;
+  text-align: center;
+  & .bg-hero {
+    background: url(../assets/imagens/hero-background.svg) no-repeat
+      center/cover;
+    padding: 3.5rem 10rem 10.25rem;
+    height: 948px;
+  }
+}
+
+section#hero-container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section#hero-container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 164px 232px 0 232px;
+
+  & h1 {
+    font-size: var(--fs-4xl);
+    margin-bottom: 2rem;
+  }
+
+  & p {
+    font-size: var(--fs-sm);
+    line-height: 1.4;
+    color: var(--text-body);
+  }
+}
+
+strong {
+  color: var(--blue-light);
+  font: var(--subtitle);
+}
+
+section#hero-container .hero {
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  height: auto;
+  width: 75rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section#hero-container .hero:hover {
+  img[src*="book"] {
+    animation: fadeIn 500ms 500ms both;
+  }
+
+  img[src*="ouija"] {
+    animation: fadeIn 500ms 1s both;
+  }
+
+  img[src*="ball"] {
+    animation: fadeIn 500ms 1.5s both;
+  }
+}
+
+section#hero-container .hero img {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+}
+
+/* 
+Para subir, subtraia pixels no top.
+Para descer, some pixels no top.
+Para ir à direita, some pixels no left.
+Para ir à esquerda, subtraia pixels no left.
+*/
+section#hero-container .hero img[src*="ouija"] {
+  top: calc(50% + 5px + 53px);
+  left: calc(50% - 20px - 550px);
+}
+
+section#hero-container .hero img[src*="book"] {
+  top: calc(50% - 40px - 90px);
+  left: calc(50% - 40px);
+}
+
+section#hero-container .hero img[src*="ball"] {
+  top: calc(50% - 20px + 64.5px);
+  left: calc(50% - 50px / 2 + 550px);
+}
+
+section#hero-container .hero img[src*="ouija"]:hover {
+  /* seu efeito aqui, exemplo: */
+  transform: scale(1.1);
+  transform: rotate(30deg);
+}
+
+section#hero-container .hero img[src*="book"]:hover {
+  /* seu efeito aqui, exemplo: */
+  transform: scale(1.1);
+  transform: rotate(30deg);
+}
+
+section#hero-container .hero img[src*="ball"]:hover {
+  /* seu efeito aqui, exemplo: */
+  transform: scale(1.1);
+  transform: rotate(30deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

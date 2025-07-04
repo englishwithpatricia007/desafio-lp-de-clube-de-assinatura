@@ -1,0 +1,14 @@
+button {
+    all: unset;
+}
+
+button.btn-primary {
+  background-color: var(--pink-dark);
+  color: white; 
+}
+
+button.btn {
+  padding: .75rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
