@@ -1,0 +1,46 @@
+section#kit-container {
+  margin-inline: auto;
+}
+
+section#kit-container header {
+  margin-top: 235px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+section#kit-container .kit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section#kit-container img {
+  width: 2rem;
+  height: 2rem;
+}
+
+section#kit-container .books img[src*="book"] {
+  width: 467px;
+  height: 617px;
+}
+
+section#kit-container .books img[src*="bookmark-yellow"] {
+  width: 172px;
+  height: 536px;
+  transform: rotate(20deg);
+}
+
+section#kit-container .books img[src*="bookmark-purple"] {
+  width: 172px;
+  height: 536px;
+  transform: rotate(25deg);
+}
+
+section#kit-container .books img[src*="pin"] {
+  width: 222px;
+  height: 254px;
+  transform: rotate(-20deg);
+}

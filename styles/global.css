@@ -85,6 +85,11 @@ ul[role="list"] {
   list-style: none;
 }
 
+flex{
+  display: flex;
+  align-items: center;
+}
+
 @media (width >= 48em) {
   :root {
     max-width: 90rem;
