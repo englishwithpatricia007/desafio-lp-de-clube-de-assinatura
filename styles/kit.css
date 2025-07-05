@@ -1,7 +1,7 @@
 section#kit-container {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -29,20 +29,20 @@ section#kit-container .kit img {
   height: 2rem;
 }
 
-section#kit-container .kit span{
+section#kit-container .kit span {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.4;
 }
 
-section#kit-container .kit h3{
+section#kit-container .kit h3 {
   font-size: 2rem;
   font-weight: 700;
 }
 
 section#kit-container .books {
   position: relative;
-  height: 920px; 
+  height: 920px;
   max-width: 1440px;
   margin-top: 2rem;
   display: flex;
@@ -58,7 +58,7 @@ section#kit-container .books img[src*="pin"] {
   height: 254px;
   transform: rotate(-8deg);
   z-index: -1;
-  top: 31rem;
+  top: 33rem;
   right: 9rem;
 }
 
@@ -85,7 +85,54 @@ section#kit-container .books img[src*="bookmark-purple"] {
   transform: rotate(22deg);
   z-index: -2;
   top: 6rem;
-  left: 17rem; /* ➕ Adicionado */
+  left: 17rem;
 }
 
+section#kit-container .books .arrows {
+  & figure:nth-child(1) {
+    & img {
+      position: absolute;
+      width: 174.5px;
+      height: 30px;
+      top: 2rem;
+      left: -23rem;
+    }
+    & figcaption {
+      position: absolute;
+      font-size: var(--fs-2xs);
+      top: 1rem;
+      left: -20rem;
+    }
+  }
+  & figure:nth-child(2) {
+    & img {
+      position: absolute;
+      width: 104.5px;
+      height: 127px;
+      top: 24rem;
+      left: -20rem;
+    }
+    & figcaption {
+      position: absolute;
+      font-size: var(--fs-2xs);
+      top: 21rem;
+      left: -20rem;
+    }
+  }
+  & figure:nth-child(3) {
+    & img {
+      position: absolute;
+      width: 145px;
+      height: 151px;
+      top: 36rem;
+      left: 15rem;
+    }
+    & figcaption {
+      position: absolute;
+      font-size: var(--fs-2xs);
+      top: 48rem;
+      left: 16rem;
+    }
+  }
 
+}
