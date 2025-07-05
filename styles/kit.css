@@ -6,17 +6,6 @@ section#kit-container {
   text-align: center;
 }
 
-section#kit-container header {
-  margin-top: 235px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-section#kit-container header span {
-  display: block;
-}
-
 section#kit-container .kit {
   display: flex;
   flex-direction: row;
@@ -53,6 +42,14 @@ section#kit-container .books img {
   position: absolute;
 }
 
+section#kit-container header {
+  margin: 235px auto 4rem;
+  text-align: center;
+}
+section#kit-container header span {
+  display: block;
+}
+
 section#kit-container .books img[src*="bookmark-yellow"],
 section#kit-container .books img[src*="bookmark-purple"],
 section#kit-container .books img[src*="pin"],
@@ -65,9 +62,7 @@ section#kit-container .books figure {
 
 section#kit-container .books:hover figure {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  z-index: 2;
-  transition: opacity 0.5s ease, transform 0.5s ease, z-index 0s; /* z-index muda instantâneo no hover */
+  transition: opacity 0.5s ease, transform 0.5s ease, z-index 0s; 
 }
 
 section#kit-container .books:hover img[src*="bookmark-purple"] {
@@ -160,32 +155,5 @@ section#kit-container .books .arrows {
       top: 46rem;
       left: 11rem;
     }
-  }
-}
-
-@keyframes slideIn-bookmark-yellow {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(156px, -108px);
-  }
-}
-
-@keyframes slideIn-bookmark-purple {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(286px, 0px);
-  }
-}
-
-@keyframes slideIn-bookmark-pin {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(-195px, 134px);
   }
 }
