@@ -1,13 +1,20 @@
 section#kit-container {
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
 }
 
 section#kit-container header {
   margin-top: 235px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4rem;
+  text-align: center;
+}
+section#kit-container header span {
+  display: block;
 }
 
 section#kit-container .kit {
@@ -17,30 +24,68 @@ section#kit-container .kit {
   justify-content: center;
 }
 
-section#kit-container img {
+section#kit-container .kit img {
   width: 2rem;
   height: 2rem;
 }
 
-section#kit-container .books img[src*="book"] {
-  width: 467px;
-  height: 617px;
+section#kit-container .kit span{
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-section#kit-container .books img[src*="bookmark-yellow"] {
-  width: 172px;
-  height: 536px;
-  transform: rotate(20deg);
+section#kit-container .kit h3{
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-section#kit-container .books img[src*="bookmark-purple"] {
-  width: 172px;
-  height: 536px;
-  transform: rotate(25deg);
+section#kit-container .books {
+  position: relative;
+  height: 920px; 
+  max-width: 1440px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+section#kit-container .books img {
+  position: absolute;
 }
 
 section#kit-container .books img[src*="pin"] {
   width: 222px;
   height: 254px;
-  transform: rotate(-20deg);
+  transform: rotate(-8deg);
+  z-index: -1;
+  top: 31rem;
+  right: 9rem;
 }
+
+section#kit-container .books img[src*="book"] {
+  width: 467px;
+  height: 617px;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section#kit-container .books img[src*="bookmark-yellow"] {
+  width: 172px;
+  height: 536px;
+  transform: rotate(12deg);
+  z-index: -1;
+  top: -2rem;
+  left: 11rem;
+}
+
+section#kit-container .books img[src*="bookmark-purple"] {
+  width: 172px;
+  height: 536px;
+  transform: rotate(22deg);
+  z-index: -2;
+  top: 6rem;
+  left: 17rem; /* ➕ Adicionado */
+}
+
+

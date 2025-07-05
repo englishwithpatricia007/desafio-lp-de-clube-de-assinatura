@@ -67,6 +67,10 @@ html {
 
 body {
   background-color: var(--shape-background);
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
 }
 
 h1,
@@ -85,7 +89,7 @@ ul[role="list"] {
   list-style: none;
 }
 
-flex{
+flex {
   display: flex;
   align-items: center;
 }
