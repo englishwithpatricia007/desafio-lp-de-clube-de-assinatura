@@ -53,7 +53,44 @@ section#kit-container .books img {
   position: absolute;
 }
 
-section#kit-container .books img[src*="pin"] {
+section#kit-container .books img[src*="bookmark-yellow"],
+section#kit-container .books img[src*="bookmark-purple"],
+section#kit-container .books img[src*="pin"],
+section#kit-container .books figure {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease, z-index 0s 2s; /* atraso no z-index */
+  z-index: -2;
+}
+
+section#kit-container .books:hover figure {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 2;
+  transition: opacity 0.5s ease, transform 0.5s ease, z-index 0s; /* z-index muda instantâneo no hover */
+}
+
+section#kit-container .books:hover img[src*="bookmark-purple"] {
+  opacity: 1;
+  width: 172px;
+  height: 536px;
+  transform: rotate(22deg);
+  z-index: -2;
+  top: 6rem;
+  left: 17rem;
+}
+
+section#kit-container .books:hover img[src*="bookmark-yellow"] {
+  opacity: 1;
+  width: 172px;
+  height: 536px;
+  transform: rotate(12deg);
+  z-index: -1;
+  top: -2rem;
+  left: 11rem;
+}
+section#kit-container .books:hover img[src*="pin"] {
+  opacity: 1;
   width: 222px;
   height: 254px;
   transform: rotate(-8deg);
@@ -70,29 +107,11 @@ section#kit-container .books img[src*="book"] {
   transform: translateX(-50%);
 }
 
-section#kit-container .books img[src*="bookmark-yellow"] {
-  width: 172px;
-  height: 536px;
-  transform: rotate(12deg);
-  z-index: -1;
-  top: -2rem;
-  left: 11rem;
-}
-
-section#kit-container .books img[src*="bookmark-purple"] {
-  width: 172px;
-  height: 536px;
-  transform: rotate(22deg);
-  z-index: -2;
-  top: 6rem;
-  left: 17rem;
-}
-
 section#kit-container .books figure {
   & figcaption {
-    width: 150px; 
+    width: 150px;
     white-space: normal;
-    word-wrap: break-word; 
+    word-wrap: break-word;
   }
 }
 
@@ -141,5 +160,32 @@ section#kit-container .books .arrows {
       top: 46rem;
       left: 11rem;
     }
+  }
+}
+
+@keyframes slideIn-bookmark-yellow {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(156px, -108px);
+  }
+}
+
+@keyframes slideIn-bookmark-purple {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(286px, 0px);
+  }
+}
+
+@keyframes slideIn-bookmark-pin {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-195px, 134px);
   }
 }
