@@ -88,6 +88,14 @@ section#kit-container .books img[src*="bookmark-purple"] {
   left: 17rem;
 }
 
+section#kit-container .books figure {
+  & figcaption {
+    width: 150px; 
+    white-space: normal;
+    word-wrap: break-word; 
+  }
+}
+
 section#kit-container .books .arrows {
   & figure:nth-child(1) {
     & img {
@@ -95,13 +103,13 @@ section#kit-container .books .arrows {
       width: 174.5px;
       height: 30px;
       top: 2rem;
-      left: -23rem;
+      left: -21rem;
     }
     & figcaption {
       position: absolute;
       font-size: var(--fs-2xs);
       top: 1rem;
-      left: -20rem;
+      left: -25rem;
     }
   }
   & figure:nth-child(2) {
@@ -115,8 +123,8 @@ section#kit-container .books .arrows {
     & figcaption {
       position: absolute;
       font-size: var(--fs-2xs);
-      top: 21rem;
-      left: -20rem;
+      top: 23rem;
+      left: -22rem;
     }
   }
   & figure:nth-child(3) {
@@ -130,9 +138,8 @@ section#kit-container .books .arrows {
     & figcaption {
       position: absolute;
       font-size: var(--fs-2xs);
-      top: 48rem;
-      left: 16rem;
+      top: 46rem;
+      left: 11rem;
     }
   }
-
 }
